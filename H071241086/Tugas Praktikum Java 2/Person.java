@@ -1,12 +1,12 @@
 public class Person {
-    private String name;
-    private int age;
-    private boolean isMale;
+    String name;
+    int age;
+    boolean isMale;
 
     public void setName(String name) {
         this.name = name;
     }
-
+    
     public String getName() {
         return name;
     }
@@ -14,7 +14,7 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-
+    
     public int getAge() {
         return age;
     }
@@ -23,26 +23,23 @@ public class Person {
         this.isMale = isMale;
     }
 
-    public boolean getGender() {
-        return isMale;
+    public String getGender() {
+        return isMale ? "Laki-laki" : "Perempuan";
     }
 
     public static void main(String[] args) {
-        Person person1 = new Person();
+  
+       Person person1 = new Person();
+        
+
         person1.setName("Ahmad");
         person1.setAge(17);
         person1.setGender(true);
 
-        System.out.println("Name: " + person1.getName());
-        System.out.println("Age: " + person1.getAge());
-        System.out.println("Gender: " + person1.getGender());
-
-        if (Person.getGender()) {
-            System.out.println("Laki-laki");
-        } else {
-            System.out.println("Perempuan");
-        }
-           
-        
+        System.out.println("Nama: " + person1.getName());
+        System.out.println("Usia: " + person1.getAge());
+        System.out.println("Jenis Kelamin: " + person1.getGender());
     }
+
+
 }

@@ -1,22 +1,22 @@
-class Cuboid{
+class Cuboid {
     double height;
     double width;
     double length;
 
-    double getVolume(){
-        return height * width * length; // Lengkapi
+    double getVolume() {
+        // Lengkapi
+        return height * width * length;
     }
 }
 
-public class Mainn{
+public class Mainn {
     public static void main(String[] args) {
         Cuboid cuboid = new Cuboid();
-        // Lengkapi
-        cuboid.height = 10;
-        cuboid.width = 15;
-        cuboid.length = 30;
-
-        System.out.printf("Volume = %.2f", cuboid.getVolume());
         
+        // Lengkapi
+        cuboid.height = 10;  
+        cuboid.width = 15;   
+        cuboid.length = 30;  
+        System.out.printf("Volume = %.2f%n", cuboid.getVolume());
     }
 }

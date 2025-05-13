@@ -1,38 +1,51 @@
 class Alamat {
     String jalan;
     String kota;
+
+    public Alamat(String jalan, String kota) {
+        this.jalan = jalan;
+        this.kota = kota;
+    }
+
+    public Alamat(){
+
+    }
+
+    public String getAlamat() {
+        return jalan + ", " + kota;
+    }
 }
 
 class Mahasiswa {
     String nama;
     String nim;
-    Alamat alamat;
+    Alamat alamat; 
 
-    String getName() {
+    public String getNama() {
         return nama;
     }
 
-    String getNim() {
+    public String getNim() {
         return nim;
     }
 
-    String getAlamat() {
-        return alamat.jalan + ", " + alamat.kota;
+    public String getAlamat() {
+        return alamat.getAlamat();
     }
 }
 
 public class Main {
     public static void main(String[] args) {
         Alamat alamat = new Alamat();
-        alamat.jalan = "Habibu Kulle";
-        alamat.kota = "Gowa";
+        alamat.jalan = "PK 7";
+        alamat.kota = "Makassar";
 
         Mahasiswa mahasiswa = new Mahasiswa();
         mahasiswa.alamat = alamat;
-        mahasiswa.nama = "Siti";
+        mahasiswa.nama = "Siti Nurhaliza";
         mahasiswa.nim = "H071241086";
 
-        System.out.println("Nama: " + mahasiswa.getName());
+        System.out.println("Nama: " + mahasiswa.getNama());
         System.out.println("Nim: " + mahasiswa.getNim());
         System.out.println("Alamat: " + mahasiswa.getAlamat());
     }
